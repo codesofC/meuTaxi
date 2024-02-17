@@ -1,12 +1,20 @@
 "use client"
 
 import { cars } from '@/utils/constants'
+import { useDirectionData } from '@/utils/context/useDirectionData'
 import Image from 'next/image'
 import { useState } from 'react'
 
 const Cars = () => {
 
     const [carChoice, setCarChoice] = useState(1)
+
+    const { directionData } = useDirectionData()
+
+    const getCost = (charges: number) => {
+
+        return (charges * directionData.routes[0].distance * 0.005).toFixed(2)
+    }
 
   return (
     <div className='mt-5 flex flex-col gap-5'>
@@ -31,7 +39,9 @@ const Cars = () => {
                         className='flex justify-between items-center flex-wrap w-full text-[12px]'
                     >
                         <span className='font-semibold'> { car.name} </span>
-                        <span> { 10 * car.charges} R$ </span>
+                        {directionData !== null && directionData.routes ? (
+                            <span> { getCost(car.charges) } R$ </span>
+                        ) : null}
                     </div>
                 </div>
             ))}
