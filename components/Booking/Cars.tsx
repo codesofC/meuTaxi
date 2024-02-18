@@ -13,7 +13,7 @@ const Cars = () => {
 
     const getCost = (charges: number) => {
 
-        return (charges * directionData.routes[0].distance * 0.005).toFixed(2)
+        return (charges * directionData.routes[0].distance * 0.00211).toFixed(2)
     }
 
   return (
@@ -25,22 +25,22 @@ const Cars = () => {
             {cars.map(car => (
                 <div 
                     key={car.id}
-                    className={`flex flex-col gap-3 items-center justify-center w-full p-2 border rounded-md cursor-pointer ${carChoice === car.id + 1 ? 'border-orange-500 border-[2px]' : ''} hover:border-orange-500 hover:border-[2px] transition-all`}
+                    className={`flex flex-col gap-2 items-center justify-center w-full min-h-20 p-2 border rounded-md cursor-pointer ${carChoice === car.id + 1 ? 'border-orange-500 border-[2px]' : ''} hover:border-orange-500 hover:border-[2px] transition-all`}
                     onClick={() => setCarChoice(car.id + 1)}
                 >
                     <Image 
                         src={car.imageUrl}
                         alt={car.name}
-                        width={120}
-                        height={150}
+                        width={90}
+                        height={60}
                         className="object-contain"
                     />
                     <div
-                        className='flex justify-between items-center flex-wrap w-full text-[12px]'
+                        className='flex justify-center gap-2 sm:justify-between items-center flex-wrap w-full text-[12px]'
                     >
                         <span className='font-semibold'> { car.name} </span>
                         {directionData !== null && directionData.routes ? (
-                            <span> { getCost(car.charges) } R$ </span>
+                            <span> { getCost(car.charges) } $ </span>
                         ) : null}
                     </div>
                 </div>

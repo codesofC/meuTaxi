@@ -22,14 +22,14 @@ const MapDistance = () => {
     }
 
   return (
-    <div className="absolute bottom-5 right-0 p-4 bg-orange-600 flex justify-between items-center gap-6">
+    <div className="absolute bottom-5 right-0 p-4 bg-[#ff9a04] flex justify-between items-center gap-6">
         <div className="text-lg text-white">
-            <span> Distancia: </span>
+            <span> Distance: </span>
             <span className="text-black"> { getDistanceToKm() } </span>
             <span> Km </span>
         </div>
         <div className="text-lg text-white">
-            <span> Tempo: </span>
+            <span> Time: </span>
             <span className="text-black"> { getTime() } </span>
         </div>
     </div>

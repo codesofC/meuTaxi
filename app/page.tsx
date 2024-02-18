@@ -1,7 +1,7 @@
 "use client";
 
-import { Booking } from "@/components";
-import MapBox from "@/components/MapBox";
+import  Booking from "@/components/Booking";
+import MapBox from "@/components/Map/MapBox";
 import { useState, useEffect } from "react";
 import { UserLocationProps } from "@/utils/types";
 import { userLocationContext } from "@/utils/context/useUserLocation";
@@ -50,11 +50,11 @@ export default function Home() {
             <directionDataContext.Provider
               value={{directionData, setDirectionData}}
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 px-3 md:px-5 lg:px-10 gap-6">
-                <div className="">
+              <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-3 px-3 md:px-5 lg:px-10 gap-6">
+                <div className="md:col-span-2 xl:col-span-1">
                   <Booking />
                 </div>
-                <div className="col-span-2 order-first md:order-last max-h-[60vh] md:max-h-[90vh]">
+                <div className="md:col-span-2 order-first md:order-last min-h-[60vh] md:max-h-[90vh]">
                   <MapBox />
                 </div>
               </div>

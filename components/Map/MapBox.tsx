@@ -72,7 +72,7 @@ const MapBox = () => {
   
   return (
     <div className="flex flex-col justify-between gap-6 pt-6 w-full h-full">
-      <h1 className="text-xl md:text-2xl font-semibold"> Mapa </h1>
+      <h1 className="text-xl md:text-2xl font-semibold"> Map </h1>
       <div className="relative rounded-lg overflow-hidden w-full h-full">
         {userLocation ? (
           <Map

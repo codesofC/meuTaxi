@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import { Navbar } from "@/components"
+import  Navbar  from "@/components/Navbar"
 import "./globals.css";
 
 const inter = Outfit({ subsets: ["latin"] });
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="pt-br">
-        <body className={inter.className}>
+        <body className={inter.className + " relative"}>
           <Navbar />
           {children}
         </body>

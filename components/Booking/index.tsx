@@ -11,16 +11,16 @@ const Booking = () => {
 
   return (
     <div className="flex flex-col gap-6 p-6 border">
-      <h1 className="text-xl md:text-2xl font-semibold">Escolher destino</h1>
+      <h1 className="text-xl md:text-2xl font-semibold">Choose destination</h1>
       <div className="p-5 border rounded-md">
         <AutoCompleted />
         <Cars />
         <PaymentsMode />
         <button 
-          className={`mt-10 font-bold w-full py-2 px-3 rounded-md bg-[#ffa600] ${!directionData?.routes ? 'bg-gray-200' : 'cursor-pointer'}`}
+          className={`mt-10 font-bold w-full py-2 px-3 rounded-md bg-[#ff9a04] ${!directionData?.routes ? 'bg-gray-200' : 'cursor-pointer'}`}
           disabled={!directionData?.routes}
         >
-          Confirmar
+          Book
         </button>
       </div>
     </div>

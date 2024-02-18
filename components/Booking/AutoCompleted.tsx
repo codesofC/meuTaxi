@@ -13,9 +13,6 @@ type ChangeInputProps = {
   destination: boolean;
   from: boolean;
 };
-type DataApiReceived = {
-  full_adress: string;
-};
 
 
 //Constants Url fetch adress
@@ -32,10 +29,10 @@ const AutoCompleted = () => {
     destination: false,
     from: false,
   });
-  const [adressList, setAdressList] = useState([]);
+  const [adressList, setAdressList] = useState<any>([]);
 
-  const {fromAddressCoordinates, setFromAddressCoordinates} = useAddressFromCoordinates()
-  const {destinationAddressCoordinates, setDestinationAddressCoordinates} = useAddressDestinationCoordinates()
+  const { setFromAddressCoordinates} = useAddressFromCoordinates()
+  const { setDestinationAddressCoordinates} = useAddressDestinationCoordinates()
 
 
   useEffect(() => {
@@ -139,7 +136,7 @@ const AutoCompleted = () => {
   return (
     <div className="flex flex-col gap-4 p-6 rounded-md">
       <div className="relative flex flex-col gap-3">
-        <label>Partida </label>
+        <label>From </label>
         <input
           type="text"
           id="from"
@@ -165,7 +162,7 @@ const AutoCompleted = () => {
       </div>
 
       <div className="relative flex flex-col gap-3">
-        <label>Destino </label>
+        <label> To </label>
         <input
           type="text"
           id="destination"

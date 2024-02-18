@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import { paymentMode } from "../utils/constants"
+import { paymentMode } from "../../utils/constants"
 
 const PaymentsMode = () => {
 
