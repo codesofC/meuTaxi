@@ -2,7 +2,7 @@
 export const cars = [
     {
         id: 0,
-        name: "Economico",
+        name: "Economic",
         imageUrl: "/assets/taxi1.png",
         charges: 1
     },
@@ -14,19 +14,19 @@ export const cars = [
     },
     {
         id: 2,
-        name: "Conforto",
+        name: "comfort",
         imageUrl: "/assets/taxi3.png",
         charges: 1.5
     },
     {
         id: 3,
-        name: "Luxo",
+        name: "Lux",
         imageUrl: "/assets/taxi4.png",
         charges: 2
     },
     {
         id: 4,
-        name: "Elétrico",
+        name: "Electric",
         imageUrl: "/assets/taxi5.png",
         charges: 2.5
     }

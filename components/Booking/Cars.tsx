@@ -36,7 +36,7 @@ const Cars = () => {
                         className="object-contain"
                     />
                     <div
-                        className='flex justify-center gap-2 sm:justify-between items-center flex-wrap w-full text-[12px]'
+                        className={`flex justify-center gap-2 ${directionData !== null && directionData.routes ? 'sm:justify-between' : 'sm:justify-center'} items-center flex-wrap w-full text-[12px]`}
                     >
                         <span className='font-semibold'> { car.name} </span>
                         {directionData !== null && directionData.routes ? (
