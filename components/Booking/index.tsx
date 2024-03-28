@@ -12,6 +12,7 @@ const Booking = () => {
   return (
     <div className="flex flex-col gap-6 p-6 border">
       <h1 className="text-xl md:text-2xl font-semibold">Choose destination</h1>
+      <h4 className="font-semibold text-sm"> Valid only with US addresses. </h4>
       <div className="p-5 border rounded-md">
         <AutoCompleted />
         <Cars />
