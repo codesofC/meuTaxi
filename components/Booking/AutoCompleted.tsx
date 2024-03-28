@@ -136,6 +136,7 @@ const AutoCompleted = () => {
   return (
     <div className="flex flex-col gap-4 p-6 rounded-md">
       <div className="relative flex flex-col gap-3">
+        <i className="font-semibold text-sm"> Valid only with US addresses. </i>
         <label>From </label>
         <input
           type="text"
