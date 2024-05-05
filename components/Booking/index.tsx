@@ -13,6 +13,7 @@ const Booking = () => {
     <div className="flex flex-col gap-6 p-6 border">
       <h1 className="text-xl md:text-2xl font-semibold">Choose destination</h1>
       <div className="p-5 border rounded-md">
+        <h4 className="w-full text-center text-xs font-semibold text-red-600"> Valid only for USA addresses</h4>
         <AutoCompleted />
         <Cars />
         <PaymentsMode />
